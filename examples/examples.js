@@ -31,6 +31,12 @@ export const options = {
             vus: 10,
             iterations: 100,
             exec: 'readmeUsageExample'
+        },
+        intExample: {
+            executor: 'shared-iterations',
+            vus: 10,
+            iterations: 100,
+            exec: 'intExample'
         }
     }
 }
@@ -130,4 +136,10 @@ export function readmeUsageExample() {
     let array = [1, 2, 3, 4, 5];
     shuffle(array);
     console.log(array);
+}
+
+export function intExample() {
+    let rng = new Random();
+    let int = rng.int();
+    console.log(int);
 }
